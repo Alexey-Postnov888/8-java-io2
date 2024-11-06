@@ -17,7 +17,7 @@ public class Task02Main {
 
     }
 
-    public static List<Path> listFiles(Path rootDir) throws IOException, InterruptedException {
+    public static List<Path> listFiles(Path rootDir) throws IOException {
         return Files.walk(rootDir).filter(path -> path.toFile().isFile()).collect(Collectors.toList());
     }
 }
